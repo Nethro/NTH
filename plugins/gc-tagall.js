@@ -12,7 +12,7 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
   const oi = `${pesan}`;
   let teks = `╭─────────\n│❏ 𝙉𝙚𝙩𝙝𝙧𝙤 𝘽𝙤𝙩 ♦️\n│❏ 𝙈𝙞𝙚𝙢𝙗𝙧𝙤𝙨 : *${participants.length}* ${oi}\n│❏ 𝙀𝙨 𝙃𝙤𝙧𝙖 𝘿𝙚 𝙅𝙪𝙜𝙖𝙧 🎮\n│\n`;
   for (const mem of participants) {
-    teks += `│♦️ @${mem.id.split('@')[0]}\n│\n`;
+    teks += `│♦️ @${mem.id.split('@')[0]}\n`;
   }
   teks += `╰@𝙉𝙚𝙩𝙝𝙧𝙤.𝙂𝙖𝙢𝙞𝙣𝙜`;
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
